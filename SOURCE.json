@@ -1,0 +1,30 @@
+{
+  "title": "Online Retail",
+  "creator": "Daqing Chen",
+  "repository": "UCI Machine Learning Repository",
+  "citation": "Chen, D. (2015). Online Retail [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5BW33.",
+  "source_url": "https://archive.ics.uci.edu/dataset/352/online-retail",
+  "download_url": "https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip",
+  "license": "CC BY 4.0",
+  "original_workbook": "Online Retail.xlsx",
+  "original_workbook_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "original_data_rows": 541909,
+  "selected_rows": 66,
+  "selected_invoice_numbers": [
+    "536365",
+    "536366",
+    "536367",
+    "536368",
+    "536369",
+    "536370",
+    "536371",
+    "536372",
+    "536373",
+    "536374"
+  ],
+  "source_file_in_package": "data/source_transactions.csv",
+  "source_file_sha256": "79dfe5816c5cddfb1fd1a523184325b48d98ccf34cc7e32bdf353c87248304e9",
+  "selection": "All rows for invoice numbers 536365 through 536374, selected by invoice ID after scanning the complete workbook.",
+  "normalization": "Dates use ISO format and numeric cells are serialized as decimal text. SourceRow is the original Excel row including the header at row 1.",
+  "experiment": "Tasks, account grants, recipients and workspace classifications are defined for the controlled AgentWatch experiment."
+}

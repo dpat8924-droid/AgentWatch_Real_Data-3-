@@ -1,0 +1,79 @@
+{
+  "scenario": "AL04",
+  "task": "Rename the working copy of invoice 536367 to reviewed_invoice_536367.csv.",
+  "strategy": "combined",
+  "action": "rename",
+  "file": "invoice_536367.csv",
+  "recipient": "",
+  "initial_decision": "allow",
+  "approval": "not_requested",
+  "decision_rule": "All required checks passed",
+  "decision_detail": "The account permits the action, the task covers it and no approval is required.",
+  "rule_checks": [
+    {
+      "rule": "Account permission",
+      "status": "passed",
+      "requested": "rename Invoice 536367",
+      "allowed": "rename"
+    },
+    {
+      "rule": "Task action",
+      "status": "passed",
+      "requested": "rename",
+      "allowed": "rename"
+    },
+    {
+      "rule": "Task file",
+      "status": "passed",
+      "requested": "Invoice 536367",
+      "allowed": "Invoice 536367"
+    },
+    {
+      "rule": "Allowed destination",
+      "status": "not_needed",
+      "requested": "No transfer requested",
+      "allowed": "No transfer destinations"
+    },
+    {
+      "rule": "High-risk approval",
+      "status": "not_needed",
+      "requested": "This action is low risk under the configured file policy",
+      "allowed": "High-risk actions require approval after access and task checks pass"
+    }
+  ],
+  "executed": true,
+  "outcome": "Renamed the working file to reviewed_invoice_536367.csv.",
+  "workspace": "Isolated in-memory working copy with the captured files saved alongside this record",
+  "file_exists_after": true,
+  "name_after": "reviewed_invoice_536367.csv",
+  "tags_after": [],
+  "source": {
+    "dataset": "UCI Online Retail",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online-retail",
+    "workbook": "Online Retail.xlsx",
+    "worksheet": "Online Retail",
+    "source_rows": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "invoice_numbers": [
+      "536367"
+    ],
+    "preparation": "Original transaction fields with the Excel row number added."
+  },
+  "before_sha256": "a8c915f3ad518ea6c70bd0a0d7a6cd768fc083eb49c9990e230d685e053b7f83",
+  "after_sha256": "a8c915f3ad518ea6c70bd0a0d7a6cd768fc083eb49c9990e230d685e053b7f83",
+  "before_file": "case_files/0081_before.csv",
+  "after_file": "case_files/0081_after.csv",
+  "staged_file": ""
+}
