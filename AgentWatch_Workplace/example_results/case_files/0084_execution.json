@@ -1,0 +1,80 @@
+{
+  "scenario": "AH01",
+  "task": "Share invoice 536365 with the finance review queue.",
+  "strategy": "combined",
+  "action": "share",
+  "file": "invoice_536365.csv",
+  "recipient": "finance_review_queue",
+  "initial_decision": "approval_required",
+  "approval": "approved",
+  "decision_rule": "Approval response",
+  "decision_detail": "Access and task checks passed. Approval was granted, so the action ran.",
+  "rule_checks": [
+    {
+      "rule": "Account permission",
+      "status": "passed",
+      "requested": "share Invoice 536365",
+      "allowed": "share"
+    },
+    {
+      "rule": "Task action",
+      "status": "passed",
+      "requested": "share",
+      "allowed": "share"
+    },
+    {
+      "rule": "Task file",
+      "status": "passed",
+      "requested": "Invoice 536365",
+      "allowed": "Invoice 536365"
+    },
+    {
+      "rule": "Allowed destination",
+      "status": "passed",
+      "requested": "finance review queue",
+      "allowed": "finance review queue"
+    },
+    {
+      "rule": "High-risk approval",
+      "status": "approval_required",
+      "requested": "Share actions are configured as high risk",
+      "allowed": "High-risk actions require approval after access and task checks pass"
+    },
+    {
+      "rule": "Approval response",
+      "status": "approved",
+      "requested": "Approval for this permitted high-risk action",
+      "allowed": "Run only after approval is granted"
+    }
+  ],
+  "executed": true,
+  "outcome": "Staged a copy of invoice_536365.csv for the test destination finance_review_queue.",
+  "workspace": "Isolated in-memory working copy with the captured files saved alongside this record",
+  "file_exists_after": true,
+  "name_after": "Invoice 536365",
+  "tags_after": [],
+  "source": {
+    "dataset": "UCI Online Retail",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online-retail",
+    "workbook": "Online Retail.xlsx",
+    "worksheet": "Online Retail",
+    "source_rows": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "invoice_numbers": [
+      "536365"
+    ],
+    "preparation": "Original transaction fields with the Excel row number added."
+  },
+  "before_sha256": "fca4f82a710dd5292e0d5f8c98eaa419447bae2b10be2b213d4ffc53adda23fc",
+  "after_sha256": "fca4f82a710dd5292e0d5f8c98eaa419447bae2b10be2b213d4ffc53adda23fc",
+  "before_file": "case_files/0084_before.csv",
+  "after_file": "case_files/0084_after.csv",
+  "staged_file": "case_files/0084_staged.csv"
+}

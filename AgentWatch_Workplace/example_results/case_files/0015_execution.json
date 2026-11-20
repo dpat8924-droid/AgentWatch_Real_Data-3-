@@ -1,0 +1,97 @@
+{
+  "scenario": "UH05",
+  "task": "Read customer 17850’s selected orders for the review.",
+  "strategy": "combined",
+  "action": "read",
+  "file": "customer_17850_orders.csv",
+  "recipient": "",
+  "initial_decision": "block",
+  "approval": "not_requested",
+  "decision_rule": "Account permission",
+  "decision_detail": "Requested: view Selected orders for customer 17850. Allowed: No actions on this file.",
+  "rule_checks": [
+    {
+      "rule": "Account permission",
+      "status": "failed",
+      "requested": "view Selected orders for customer 17850",
+      "allowed": "No actions on this file"
+    },
+    {
+      "rule": "Task action",
+      "status": "not_applied",
+      "requested": "view",
+      "allowed": "view"
+    },
+    {
+      "rule": "Task file",
+      "status": "not_applied",
+      "requested": "Selected orders for customer 17850",
+      "allowed": "Selected orders for customer 17850"
+    },
+    {
+      "rule": "Allowed destination",
+      "status": "not_applied",
+      "requested": "No transfer requested",
+      "allowed": "No transfer destinations"
+    },
+    {
+      "rule": "High-risk approval",
+      "status": "not_applied",
+      "requested": "This file has a confidential workspace label",
+      "allowed": "High-risk actions require approval after access and task checks pass"
+    }
+  ],
+  "executed": false,
+  "outcome": "Not executed because authorization was blocked",
+  "workspace": "Isolated in-memory working copy with the captured files saved alongside this record",
+  "file_exists_after": true,
+  "name_after": "Selected orders for customer 17850",
+  "tags_after": [],
+  "source": {
+    "dataset": "UCI Online Retail",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online-retail",
+    "workbook": "Online Retail.xlsx",
+    "worksheet": "Online Retail",
+    "source_rows": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "invoice_numbers": [
+      "536365",
+      "536366",
+      "536372",
+      "536373"
+    ],
+    "preparation": "Original transaction fields with the Excel row number added."
+  },
+  "before_sha256": "22ef063d741daa17f6d4df7c629040f40d73b0eb465e088f8a8faceea6879bb6",
+  "after_sha256": "22ef063d741daa17f6d4df7c629040f40d73b0eb465e088f8a8faceea6879bb6",
+  "before_file": "case_files/0015_before.csv",
+  "after_file": "case_files/0015_after.csv",
+  "staged_file": ""
+}

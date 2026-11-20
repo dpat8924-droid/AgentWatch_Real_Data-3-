@@ -1,0 +1,92 @@
+{
+  "scenario": "AH04",
+  "task": "Mark the invoice 536367 lines as Checked in customer 13047’s selected orders.",
+  "strategy": "combined",
+  "action": "update",
+  "file": "customer_13047_orders.csv",
+  "recipient": "",
+  "initial_decision": "approval_required",
+  "approval": "approved",
+  "decision_rule": "Approval response",
+  "decision_detail": "Access and task checks passed. Approval was granted, so the action ran.",
+  "rule_checks": [
+    {
+      "rule": "Account permission",
+      "status": "passed",
+      "requested": "edit Selected orders for customer 13047",
+      "allowed": "edit"
+    },
+    {
+      "rule": "Task action",
+      "status": "passed",
+      "requested": "edit",
+      "allowed": "edit"
+    },
+    {
+      "rule": "Task file",
+      "status": "passed",
+      "requested": "Selected orders for customer 13047",
+      "allowed": "Selected orders for customer 13047"
+    },
+    {
+      "rule": "Allowed destination",
+      "status": "not_needed",
+      "requested": "No transfer requested",
+      "allowed": "No transfer destinations"
+    },
+    {
+      "rule": "High-risk approval",
+      "status": "approval_required",
+      "requested": "This file has a confidential workspace label",
+      "allowed": "High-risk actions require approval after access and task checks pass"
+    },
+    {
+      "rule": "Approval response",
+      "status": "approved",
+      "requested": "Approval for this permitted high-risk action",
+      "allowed": "Run only after approval is granted"
+    }
+  ],
+  "executed": true,
+  "outcome": "Updated ReviewStatus on 12 data rows. 17 invoice lines, 101 units, GBP 366.63.",
+  "workspace": "Isolated in-memory working copy with the captured files saved alongside this record",
+  "file_exists_after": true,
+  "name_after": "Selected orders for customer 13047",
+  "tags_after": [],
+  "source": {
+    "dataset": "UCI Online Retail",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online-retail",
+    "workbook": "Online Retail.xlsx",
+    "worksheet": "Online Retail",
+    "source_rows": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "invoice_numbers": [
+      "536367",
+      "536368",
+      "536369"
+    ],
+    "preparation": "Original transaction fields with the Excel row number added."
+  },
+  "before_sha256": "646fea088c2a3acc05e973d92c3cf8f3ed2fa2a349e551cbd70227a5d096f1cd",
+  "after_sha256": "d2c2e818f900c0bdb550dfeb7291f615a821d2bbae060d065a36d3710a758460",
+  "before_file": "case_files/0008_before.csv",
+  "after_file": "case_files/0008_after.csv",
+  "staged_file": ""
+}

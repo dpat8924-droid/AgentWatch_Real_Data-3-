@@ -1,0 +1,69 @@
+{
+  "scenario": "UL02",
+  "task": "Mark invoice 536366 as reviewed.",
+  "strategy": "permissions",
+  "action": "tag",
+  "file": "invoice_536366.csv",
+  "recipient": "",
+  "initial_decision": "block",
+  "approval": "not_requested",
+  "decision_rule": "Account permission",
+  "decision_detail": "Requested: tag Invoice 536366. Allowed: view.",
+  "rule_checks": [
+    {
+      "rule": "Account permission",
+      "status": "failed",
+      "requested": "tag Invoice 536366",
+      "allowed": "view"
+    },
+    {
+      "rule": "Task action",
+      "status": "not_applied",
+      "requested": "tag",
+      "allowed": "tag"
+    },
+    {
+      "rule": "Task file",
+      "status": "not_applied",
+      "requested": "Invoice 536366",
+      "allowed": "Invoice 536366"
+    },
+    {
+      "rule": "Allowed destination",
+      "status": "not_applied",
+      "requested": "No transfer requested",
+      "allowed": "No transfer destinations"
+    },
+    {
+      "rule": "High-risk approval",
+      "status": "not_applied",
+      "requested": "This action is low risk under the configured file policy",
+      "allowed": "High-risk actions require approval after access and task checks pass"
+    }
+  ],
+  "executed": false,
+  "outcome": "Not executed because authorization was blocked",
+  "workspace": "Isolated in-memory working copy with the captured files saved alongside this record",
+  "file_exists_after": true,
+  "name_after": "Invoice 536366",
+  "tags_after": [],
+  "source": {
+    "dataset": "UCI Online Retail",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online-retail",
+    "workbook": "Online Retail.xlsx",
+    "worksheet": "Online Retail",
+    "source_rows": [
+      9,
+      10
+    ],
+    "invoice_numbers": [
+      "536366"
+    ],
+    "preparation": "Original transaction fields with the Excel row number added."
+  },
+  "before_sha256": "5da1fb33b276766a8c7b72f1abd38d567a48680cc134b01c1ed4e1553c4b0d27",
+  "after_sha256": "5da1fb33b276766a8c7b72f1abd38d567a48680cc134b01c1ed4e1553c4b0d27",
+  "before_file": "case_files/0045_before.csv",
+  "after_file": "case_files/0045_after.csv",
+  "staged_file": ""
+}
